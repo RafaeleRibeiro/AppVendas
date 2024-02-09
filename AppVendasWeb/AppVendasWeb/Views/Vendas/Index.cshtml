@@ -29,7 +29,7 @@
             <th></th>
         </tr>
     </thead>
-    <tbody>
+    <tbody class="text-center">
         @foreach (var item in Model)
         {
             <tr>
@@ -45,14 +45,16 @@
                 <td>
                     @Html.DisplayFor(modelItem => item.Cliente.CPF)
                 </td>
-                <td class="text-end">
+                <td class="text-center">
+
+                    <a class="text-decoration-none text-light" asp-controller="ItemDaVendas" asp-action="Create" asp-route-id="@item.VendaId">
+                        <svg class="me-1" bootstrap-icon="PlusLg" width="16" height="16" arial-label="Adicionar"></svg>
+                    </a>
+
                     <a class="text-decoration-none text-light" asp-action="Edit" asp-route-id="@item.VendaId">
                         <svg class="me-2" bootstrap-icon="PencilFill" width="16" height="16" arial-label="Editar"></svg>
                     </a>
 
-                    <a class="text-decoration-none text-light" asp-action="Details" asp-route-id="@item.VendaId">
-                        <svg class="me-2" bootstrap-icon="InfoCircleFill" width="16" height="16" arial-label="Detalhes"></svg>
-                    </a>
                     <a class="text-decoration-none text-light" asp-action="Delete" asp-route-id="@item.VendaId">
                         <svg class="me-2" bootstrap-icon="Trash" width="16" height="16" arial-label="Excluir"></svg>
                     </a>
