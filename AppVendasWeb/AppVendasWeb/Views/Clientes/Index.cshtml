@@ -14,7 +14,7 @@
 
 <div class="table-responsive">
     <table class="table table-dark table-striped table-hover">
-        <thead>
+        <thead class="text-center">
             <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.ClienteNome)
@@ -34,13 +34,15 @@
                 <th>
                     @Html.DisplayNameFor(model => model.DataCadastro)
                 </th>
-                <th>
-                    @Html.DisplayNameFor(model => model.CadastroAtivo)
+                <th class="">
+                    Ativo
                 </th>
-                <th></th>
+                <th>
+
+                </th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="text-center">
             @foreach (var item in Model)
             {
                 <tr>
@@ -62,18 +64,20 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.DataCadastro)
                     </td>
-                    <td>
+                    <td class="">
+
                         @Html.DisplayFor(modelItem => item.CadastroAtivo)
                     </td>
-                    <td class="text-end">
-                        <a class="text-decoration-none text-light" asp-action="Edit" asp-route-id="@item.ClienteId">
+                    <td>
+                        <a class="text-decoration-none text-success" asp-action="Edit" asp-route-id="@item.ClienteId">
                             <svg class="me-2" bootstrap-icon="PencilFill" width="16" height="16" arial-label="Editar"></svg>
                         </a>
 
-                        <a class="text-decoration-none text-light" asp-action="Details" asp-route-id="@item.ClienteId">
+                        <a class="text-decoration-none text-warning" asp-action="Details" asp-route-id="@item.ClienteId">
                             <svg class="me-2" bootstrap-icon="InfoCircleFill" width="16" height="16" arial-label="Detalhes"></svg>
                         </a>
-                        <a class="text-decoration-none text-light" asp-action="Delete" asp-route-id="@item.ClienteId">
+
+                        <a class="text-decoration-none text-danger" asp-action="Delete" asp-route-id="@item.ClienteId">
                             <svg class="me-2" bootstrap-icon="Trash" width="16" height="16" arial-label="Excluir"></svg>
                         </a>
                     </td>
