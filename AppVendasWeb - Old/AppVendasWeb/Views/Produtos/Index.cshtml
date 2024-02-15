@@ -1,0 +1,57 @@
+﻿@model IEnumerable<AppVendasWeb.Models.Produto>
+
+@{
+    ViewData["Title"] = "Produtos Disponiveis";
+}
+
+<h1 class="display-5 text-light my-5">Produtoa Disponiveis</h1>
+
+<p>
+    <a asp-action="Create" class="btn btn-lg btn-outline-light d-inline-flex align-items-center">
+        <svg class="me-2" bootstrap-icon="PlusLg" width="16" height="16" arial-label="Adicionar"></svg>Adicionar
+    </a>
+</p>
+<table class="table table-bordered table-light table-striped table-hover" style="border-collapse: separate; border-spacing:0 10px">
+    <thead class="text-center">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Descricao)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Preco)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Categoria)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody class="text-ce">
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Descricao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Preco)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Categoria.CategoriaNome)
+                </td>
+                <td class="text-end">
+                    <a class="text-decoration-none text-success" asp-action="Edit" asp-route-id="@item.ProdutoId">
+                        <svg class="me-2" bootstrap-icon="PencilFill" width="16" height="16" arial-label="Editar"></svg>
+                    </a>
+
+                    <a class="text-decoration-none text-warning" asp-action="Details" asp-route-id="@item.ProdutoId">
+                        <svg class="me-2" bootstrap-icon="InfoCircleFill" width="16" height="16" arial-label="Detalhes"></svg>
+                    </a>
+                    <a class="text-decoration-none text-danger" asp-action="Delete" asp-route-id="@item.ProdutoId">
+                        <svg class="me-2" bootstrap-icon="Trash" width="16" height="16" arial-label="Excluir"></svg>
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

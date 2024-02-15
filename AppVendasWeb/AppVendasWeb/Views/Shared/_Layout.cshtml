@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/AppVendasWeb.styles.css" asp-append-version="true" />
 </head>
-<body class="bg-dark bg-gradient text-light">
+<body class="bg-warning bg-gradient text-dark">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark text-light border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light text-dark border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppVendasWeb</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -20,23 +20,21 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Vendas" asp-action="Index">Vendas</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Vendas" asp-action="Index">Vendas</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="ItemDaVendas" asp-action="Index">ItensDaVenda</a>
-                        </li>
+
                     </ul>
                 </div>
             </div>
@@ -48,10 +46,19 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-light bg-dark text-center">
-        <div class="container">
-            &copy; 2024 - AppVendasWeb - <a class="text-light" asp-area="" asp-controller="Home" asp-action="Privacy">Política de Privacidade</a>
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 mb-0 border-top fixed-bottom bg-light">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap" /></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Company, Inc</span>
         </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"> <svg class="me-2" bootstrap-icon="Facebook" width="16" height="16" arial-label="Detalhes"></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"> <svg class="me-2" bootstrap-icon="Twitter" width="16" height="16" arial-label="Detalhes"></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"> <svg class="me-2" bootstrap-icon="Instagram" width="16" height="16" arial-label="Detalhes"></svg></a></li>
+        </ul>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

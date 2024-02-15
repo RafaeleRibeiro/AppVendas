@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.Identity.Client;
+using System.ComponentModel.DataAnnotations;
 
 namespace AppVendasWeb.Models
 {
@@ -11,8 +12,8 @@ namespace AppVendasWeb.Models
         [StringLength(100, ErrorMessage = "O campo Nome deve ter no máximo 100 caracteres")]
         public string ClienteNome { get; set; }
 
-        [Required(ErrorMessage = "O campo CPF è obrigatório")]
-        [StringLength(14, ErrorMessage = "O campo CPF deve ter no máximo 11 caracteres")]
+        [Required(ErrorMessage = "O campo CPF é obrigatório")]
+        [StringLength(14, ErrorMessage = "O campo CPF deve ter no máximo 11 números")]
         public string CPF { get; set; }
 
         [Display(Name = "E-mail")]
@@ -20,11 +21,11 @@ namespace AppVendasWeb.Models
         [StringLength(150, ErrorMessage = "O campo E-mail deve ter no máximo 150 caracteres")]
         public string Email { get; set; }
 
-        [Display(Name = "Data de nascimento")]
-        [Required(ErrorMessage = "A data de Nascimento é obrigatório")]
+        [Display(Name = "Data de Nascimento")]
+        [Required(ErrorMessage = "A Data de Nascimento é obrigatória")]
         public DateOnly DataNascimento { get; set; }
 
-        [StringLength(15, ErrorMessage = "O campo é obrigatório")]
+        [StringLength(15, ErrorMessage = "O campo Celular deve ter 11 números")]
         public string? Celular { get; set; }
 
         [Display(Name = "Data de Cadastro")]

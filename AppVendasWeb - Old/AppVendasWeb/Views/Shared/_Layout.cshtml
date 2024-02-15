@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - AppVendasWeb</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/AppVendasWeb.styles.css" asp-append-version="true" />
+</head>
+<body class="bg-warning bg-gradient text-dark">
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-light text-dark border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand text-dark" asp-area="" asp-controller="Home" asp-action="Index">AppVendasWeb</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Categorias" asp-action="Index">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Produtos" asp-action="Index">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Vendas" asp-action="Index">Vendas</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+    <!--
+    <footer class="border-top footer text-dark bg-light text-center">
+        <div class="container">
+            &copy; 2024 - AppVendasWeb - <a class="text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Política de Privacidade</a>
+        </div>
+    </footer>
+    -->
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 mt-4 mb-0 border-top fixed-bottom bg-light">
+        <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
+                <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap" /></svg>
+            </a>
+            <span class="mb-3 mb-md-0 text-body-secondary">&copy; 2023 Company, Inc</span>
+        </div>
+
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-body-secondary" href="#"> <svg class="me-2" bootstrap-icon="Facebook" width="16" height="16" arial-label="Detalhes"></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"> <svg class="me-2" bootstrap-icon="Twitter" width="16" height="16" arial-label="Detalhes"></svg></a></li>
+            <li class="ms-3"><a class="text-body-secondary" href="#"> <svg class="me-2" bootstrap-icon="Instagram" width="16" height="16" arial-label="Detalhes"></svg></a></li>
+        </ul>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
